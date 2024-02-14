@@ -61,4 +61,9 @@ public class Jogador implements Comparable<Jogador> {
     public int compareTo(Jogador o) {
         return  o.getPontuacao() - this.getPontuacao();
     }
+
+    @Override
+    public String toString() {
+        return Nome;
+    }
 }

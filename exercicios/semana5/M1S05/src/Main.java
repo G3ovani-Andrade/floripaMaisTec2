@@ -9,19 +9,23 @@ public class Main {
 
         Jogador jogador1 = new Jogador();
         Jogador jogador2 = new Jogador();
-        jogador1.setNome("1");
+
+        jogador1.setNome("Geovani");
         jogador1.setPontuacao(10);
-        jogador2.setNome("2");
+
+        jogador2.setNome("Adriano");
         jogador2.setPontuacao(11);
 
         melhoresJogadores.add(jogador1);
         melhoresJogadores.add(jogador2);
-        Collections.sort(melhoresJogadores);
+
+
         gerarRank();
     }
     public static void gerarRank(){
-        IntStream.range(0,melhoresJogadores.size())
-                .forEach(i-> System.out.println(melhoresJogadores
-                                                .get(i).getNome() + melhoresJogadores.get(i).getNome()));
+        Collections.sort(melhoresJogadores);
+        for (int i =0;i<melhoresJogadores.size() && i<=9;i++){
+            System.out.println(melhoresJogadores.get(i).toString() + " - posição "+ (i+1));
+        }
     }
 }
