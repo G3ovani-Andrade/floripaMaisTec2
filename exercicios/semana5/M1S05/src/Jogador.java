@@ -3,7 +3,6 @@ public class Jogador {
     private int idade;
     private int pontuação;
     private int numeroTentivas;
-
     public Jogador(String nome, int idade, int pontuação, int numeroTentivas) {
         Nome = nome;
         this.idade = idade;
