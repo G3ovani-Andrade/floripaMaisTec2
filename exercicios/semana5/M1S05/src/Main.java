@@ -1,8 +1,8 @@
-import java.util.*;
-import java.util.stream.Stream;
+import bo.Jogador;
+import bo.Jogo;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.*;
+
 public class Main {
     static List<Jogador> melhoresJogadores = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
@@ -10,7 +10,7 @@ public class Main {
 
         Jogador jogador1 = new Jogador();
         Jogador jogador2 = new Jogador();
-
+        Jogo.jogar();
         jogador1.setNome("Geovani");
         jogador1.setPontuacao(10);
 
@@ -35,7 +35,7 @@ public class Main {
     }
     public static Jogador criarJogador() {
         Jogador jogador = new Jogador();
-        System.out.println("Insira o nome do novo Jogador: ");
+        System.out.println("Insira o nome do novo bo.Jogador: ");
         boolean isNew = true;
         String novoNome;
         do {

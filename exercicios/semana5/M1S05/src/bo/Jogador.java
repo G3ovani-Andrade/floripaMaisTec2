@@ -1,14 +1,14 @@
-import java.util.Comparator;
+package bo;
 
 public class Jogador implements Comparable<Jogador> {
     private String Nome;
     private int idade;
     private int pontuacao;
     private int numeroTentivas;
-    public Jogador(String nome, int idade, int pontuação, int numeroTentivas) {
+    public Jogador(String nome, int idade, int pontuacao, int numeroTentivas) {
         Nome = nome;
         this.idade = idade;
-        this.pontuacao = pontuação;
+        this.pontuacao = pontuacao;
         this.numeroTentivas = numeroTentivas;
     }
 
@@ -36,7 +36,7 @@ public class Jogador implements Comparable<Jogador> {
     }
 
     public void setPontuacao(int pontuação) {
-        this.pontuacao = pontuação;
+        this.pontuacao = pontuacao;
     }
 
     public int getNumeroTentivas() {
@@ -46,11 +46,11 @@ public class Jogador implements Comparable<Jogador> {
     public void setNumeroTentivas(int numeroTentivas) {
         this.numeroTentivas = numeroTentivas;
     }
-    public void adicionarPontuacao(int pontuação){
-        this.pontuacao += pontuação;
+    public void adicionarPontuacao(int pontuacao){
+        this.pontuacao += pontuacao;
     }
     public void perderPontuacao(int pontuação){
-        this.pontuacao -= pontuação;
+        this.pontuacao -= pontuacao;
     }
     public void adicionarTentatica(int numeroTentivas){
         this.numeroTentivas += numeroTentivas;
