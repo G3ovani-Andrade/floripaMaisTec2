@@ -1,12 +1,14 @@
-public class Jogador {
+import java.util.Comparator;
+
+public class Jogador implements Comparable<Jogador> {
     private String Nome;
     private int idade;
-    private int pontuação;
+    private int pontuacao;
     private int numeroTentivas;
     public Jogador(String nome, int idade, int pontuação, int numeroTentivas) {
         Nome = nome;
         this.idade = idade;
-        this.pontuação = pontuação;
+        this.pontuacao = pontuação;
         this.numeroTentivas = numeroTentivas;
     }
 
@@ -29,12 +31,12 @@ public class Jogador {
         this.idade = idade;
     }
 
-    public int getPontuação() {
-        return pontuação;
+    public int getPontuacao() {
+        return pontuacao;
     }
 
-    public void setPontuação(int pontuação) {
-        this.pontuação = pontuação;
+    public void setPontuacao(int pontuação) {
+        this.pontuacao = pontuação;
     }
 
     public int getNumeroTentivas() {
@@ -45,13 +47,18 @@ public class Jogador {
         this.numeroTentivas = numeroTentivas;
     }
     public void adicionarPontuacao(int pontuação){
-        this.pontuação += pontuação;
+        this.pontuacao += pontuação;
     }
     public void perderPontuacao(int pontuação){
-        this.pontuação -= pontuação;
+        this.pontuacao -= pontuação;
     }
     public void adicionarTentatica(int numeroTentivas){
         this.numeroTentivas += numeroTentivas;
     }
 
+
+    @Override
+    public int compareTo(Jogador o) {
+        return  o.getPontuacao() - this.getPontuacao();
+    }
 }
