@@ -2,6 +2,7 @@ package bo;
 
 import javax.swing.*;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Jogo {
     private static Jogador melhorJogador;
@@ -26,4 +27,11 @@ public class Jogo {
         }
         return opcao > numAleatorio;
     }
+    public static boolean jogar(int num){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numEscolhido = sc.nextInt();
+        return num>numEscolhido;
+    }
+
 }
